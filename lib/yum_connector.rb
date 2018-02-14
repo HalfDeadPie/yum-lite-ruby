@@ -1,6 +1,3 @@
-require 'request'
-require 'json'
-
 # Handles connection using Requests and provides the results to client
 class YumConnector
   def self.search(parameters, xp)

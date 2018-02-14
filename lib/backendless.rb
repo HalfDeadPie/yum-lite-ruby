@@ -1,6 +1,3 @@
-require 'faraday'
-require 'parser'
-
 # Provides communication with Backendless API
 class Backendless
   @app_id = 'B04D050F-9131-884B-FFBE-F3A2EC48B300'

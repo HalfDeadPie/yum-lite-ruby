@@ -1,9 +1,3 @@
-require 'yum_connector'
-require 'cli_parser'
-require 'food'
-require 'backendless'
-require 'user'
-
 # Provides methods to access Yummly API
 class Client
   def recipe(parameters)

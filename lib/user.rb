@@ -55,6 +55,8 @@ class User
     end
     @email = creddentials[0][0]
     @password = creddentials[0][1]
+  rescue StandardError => e
+    abort("You are not logged in!\nERROR:\n#{e}")
   end
 
   def update_last_food_id(food_id)
@@ -63,15 +65,21 @@ class User
   end
 
   def review(rating)
-    real_rating = Integer(rating)
-    real_rating = 3 if real_rating > 3
-    real_rating = 0 if real_rating < 0
+    real_rating = check_rating rating
     @xp += real_rating
     last_food = Backendless.last @id
     return false if last_food.eql? 'Empty plate'
     response = Backendless.update(@id, @token, 'xp', @xp)
     update_last_food_id 'Empty plate' if response
     true if response
+  end
+
+  def check_rating(rating)
+    abort('Rating points missing!') if rating.nil?
+    real_rating = Integer(rating)
+    real_rating = 3 if real_rating > 3
+    real_rating = 0 if real_rating < 0
+    real_rating
   end
 
   def to_str

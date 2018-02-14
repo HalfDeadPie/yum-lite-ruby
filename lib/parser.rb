@@ -1,5 +1,3 @@
-require 'json'
-
 # Provides parsing methods of all kind
 class Parser
   def self.get_search_value(json, description)

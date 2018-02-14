@@ -1,7 +1,3 @@
-require 'optparse'
-require 'client'
-require 'json'
-
 # The command line interface parser
 class CliParser
   @options = {}
@@ -14,14 +10,13 @@ class CliParser
   }
   @banner = "Usage: yum [options] SUBCOMMAND\n"
   @banner += "\nSUBCOMMANDS:\n"
-  @banner += "\trecipe\t-\tGenerates recipe according to parameters\n\n"
-  @banner += "\tregister USERNAME PASSWORD\t-\tRegister the new user\n\n"
-  @banner += "\tlogin USERNAME PASSWORD\t-\tLogin the user\n\n"
-  @banner += "\tlast\t-\tPrint the last generated food\n\n"
-  @banner += "\treview REVIEW\t-\tUser reviews the last generated"
+  @banner += "\trecipe\t\t-\t\tGenerates recipe according to parameters\n\n"
+  @banner += "\tregister USERNAME PASSWORD\t\t-\t\tRegister the new user\n\n"
+  @banner += "\tlogin USERNAME PASSWORD\t\t-\t\tLogin the user\n\n"
+  @banner += "\tlast\t\t-\t\tPrint the last generated food\n\n"
+  @banner += "\treview REVIEW\t\t-\t\tUser reviews the last generated"
   @banner += "food from 0 to 3 points and gain the XP points\n\n"
-  @banner += "\tuser\t-\tPrints the user stats\n\n"
-  @banner += "OPTIONS:\n"
+  @banner += "\tuser\t\t-\t\tPrints the user stats\n\n"
 
   def self.parse_opts
     OptionParser.new do |opts|
@@ -90,25 +85,28 @@ class CliParser
         @options[:excludedDiet] = diet
       end
     end.parse!
+  rescue OptionParser::InvalidOption => e
+    abort(e)
   end
 
   def self.parse_argv
     client = Client.new
-    case ARGV[0]
-    when 'recipe'
-      client.recipe @options
-    when 'register'
-      client.register ARGV[1], ARGV[2]
-    when 'login'
-      client.login ARGV[1], ARGV[2]
-    when 'last'
-      client.last
-    when 'review'
-      client.review ARGV[1]
-    when 'user'
-      client.user
+    subcommands = {
+      recipe: -> { client.recipe @options },
+      register: -> { client.register ARGV[1], ARGV[2] },
+      login: -> { client.login ARGV[1], ARGV[2] },
+      last: -> { client.last },
+      review: -> { client.review ARGV[1] },
+      user: -> { client.user }
+    }
+    call_subcommand subcommands[ARGV[0].to_sym]
+  end
+
+  def self.call_subcommand(command)
+    if command.nil?
+      abort(@banner)
     else
-      puts 'Wrong command!'
+      command.call
     end
   end
 end

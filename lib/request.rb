@@ -1,6 +1,3 @@
-require 'parser'
-require 'faraday'
-
 # Handle requests using the Faraday adapter
 class Request
   @uri = 'http://api.yummly.com/v1/api/'
