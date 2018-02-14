@@ -65,7 +65,6 @@ class Request
 
   def self.add_search_parameters(parameters, search_parameters)
     parameters.each do |key, value|
-
       metadata = get_metadata key
       metadata_json = Parser.jsonp_to_json metadata, key
       init_search_parameters search_parameters, key

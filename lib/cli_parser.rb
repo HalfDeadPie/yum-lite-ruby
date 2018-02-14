@@ -18,7 +18,8 @@ class CliParser
   @banner += "\tregister USERNAME PASSWORD\t-\tRegister the new user\n\n"
   @banner += "\tlogin USERNAME PASSWORD\t-\tLogin the user\n\n"
   @banner += "\tlast\t-\tPrint the last generated food\n\n"
-  @banner += "\treview REVIEW\t-\tUser reviews the last generated food from 0 to 3 points and gain the XP points\n\n"
+  @banner += "\treview REVIEW\t-\tUser reviews the last generated"
+  @banner += "food from 0 to 3 points and gain the XP points\n\n"
   @banner += "\tuser\t-\tPrints the user stats\n\n"
   @banner += "OPTIONS:\n"
 
@@ -40,24 +41,24 @@ class CliParser
         exit
       end
 
-      # phrase ------------------------------------------------------------------------
+      # phrase -----------------------------------------------------------------
       # include recipe with phrase
       opts.on('-p', '--phrase PHRASE', @help[:phrase]) do |phrase|
         @options[:q] = phrase
       end
 
-      # holiday ------------------------------------------------------------------------
+      # holiday ----------------------------------------------------------------
       # include holiday recipes
       opts.on('-h', '--holiday HOLIDAY', @help[:holiday]) do |holiday|
         @options[:allowedHoliday] = holiday
       end
 
       # exclude holiday recipes
-      opts.on('--eh', '--excluded-holiday HOLIDAY', @help[:holiday]) do |holiday|
-        @options[:excludedHoliday] = holiday
+      opts.on('--eh', '--excluded-holiday HOLIDAY', @help[:holiday]) do |hol|
+        @options[:excludedHoliday] = hol
       end
 
-      # ingredients -------------------------------------------------------------------
+      # ingredients ------------------------------------------------------------
       # include ingredients in recipes
       opts.on('-i', '--ingredients INGREDIENT', @help[:ing]) do |ing|
         @options[:allowedIngredient] = ing
@@ -68,7 +69,7 @@ class CliParser
         @options[:excludedIngredient] = ing
       end
 
-      # cuisines -----------------------------------------------------------------------
+      # cuisines ---------------------------------------------------------------
       # include cuisines in recipes
       opts.on('-c', '--cuisine CUISINE', @help[:cui]) do |cui|
         @options[:allowedCuisine] = cui
@@ -78,7 +79,7 @@ class CliParser
       opts.on('--ec', '--excluded-cuisine CUISINE', @help[:cui]) do |cui|
         @options[:excludedCuisine] = cui
       end
-      # diets -----------------------------------------------------------------------
+      # diets ------------------------------------------------------------------
       # include diets in recipes
       opts.on('-d', '--diet DIET', @help[:diet]) do |diet|
         @options[:allowedDiet] = diet
@@ -88,7 +89,6 @@ class CliParser
       opts.on('--ed', '--excluded-diet DIET', @help[:diet]) do |diet|
         @options[:excludedDiet] = diet
       end
-
     end.parse!
   end
 

@@ -3,11 +3,11 @@ require 'json'
 # Provides parsing methods of all kind
 class Parser
   def self.get_search_value(json, description)
-    json.each do |metaparameter|
-      ext_hash = metaparameter.select {|k, _| k.downcase.include? 'description'}
+    json.each do |metapar|
+      ext_hash = metapar.select { |k, _| k.downcase.include? 'description' }
       extern = ext_hash.values.first.downcase
       local = description.downcase
-      return metaparameter['searchValue'] if "\b#{local}\b".match(extern)
+      return metapar['searchValue'] if "\b#{local}\b".match(extern)
     end
   end
 
@@ -24,29 +24,29 @@ class Parser
     id
   end
 
-  def self.slice_metadata_key key
+  def self.slice_metadata_key(key)
     metadata_key = key.to_s
     metadata_key.slice!('allowed') if metadata_key.include? 'allowed'
     metadata_key.slice!('excluded') if metadata_key.include? 'exclude'
     metadata_key.downcase
   end
 
-  def self.login_object_id login_response
+  def self.login_object_id(login_response)
     j = JSON.parse login_response
     j['objectId']
   end
 
-  def self.extract_food_id response
+  def self.extract_food_id(response)
     j = JSON.parse response
     j['food_id']
   end
 
-  def self.extract_user_token response
+  def self.extract_user_token(response)
     j = JSON.parse response
     j['user-token']
   end
 
-  def self.extract_xp response
+  def self.extract_xp(response)
     j = JSON.parse response
     j['xp']
   end

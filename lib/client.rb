@@ -11,7 +11,7 @@ class Client
     user.read_creddentials
     user.login
     generated_food = YumConnector.search parameters, user.xp
-    abort("Sorry, I can't find food for you like that :(") if generated_food.nil?
+    abort("Sorry, I can't find food for you like that") if generated_food.nil?
     user.update_last_food_id generated_food.id
     puts generated_food.to_str
   end
@@ -52,5 +52,4 @@ class Client
     user.login
     puts user.to_str
   end
-
 end

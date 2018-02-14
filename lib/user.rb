@@ -1,5 +1,5 @@
+# Represents the user of this application
 class User
-
   attr_reader :email, :password, :token, :xp
 
   def self.initialize
@@ -16,7 +16,7 @@ class User
     end
   end
 
-  def login(email=@email, password=@password)
+  def login(email = @email, password = @password)
     response = Backendless.login email, password
     if response
       process_login_response email, password, response
@@ -50,7 +50,7 @@ class User
 
   def read_creddentials
     creddentials = []
-    CSV.foreach'creddentials.csv' do |record|
+    CSV.foreach 'creddentials.csv' do |record|
       creddentials << record
     end
     @email = creddentials[0][0]
@@ -85,5 +85,4 @@ class User
   def level(xp)
     xp / 10
   end
-
 end
