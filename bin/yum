@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'yum'
+
+Yum::Yummer.cli
