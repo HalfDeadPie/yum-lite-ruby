@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version     = Yum::VERSION
   s.homepage    = 'https://github.com/HalfDeadPie/yum-lite-ruby'
   s.license     = 'MIT'
-  s.author      = 'Simon Štefunko'
+  s.author      = 'Simon Stefunko'
   s.email       = 's.stefunko@gmail.com'
 
   s.summary     = 'Improve your cooking skills'

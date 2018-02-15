@@ -2,7 +2,7 @@
 class Request
   @uri = 'http://api.yummly.com/v1/api/'
   @app_id = 'a9ceda48'
-  @app_key = '33bc48b7d177e55baeef2c4a7baa1ea8'
+  @app_key = ENV['YUMMLY_KEY']
   @max_results = 3
 
   def self.generic_connection
@@ -37,7 +37,7 @@ class Request
     response = conn.get 'recipes', search_parameters
 
     # return body if OK response
-    validate_response response
+    process_response response
   end
 
   def self.get_recipe(food_id)
@@ -48,11 +48,15 @@ class Request
     response = conn.get "recipe/#{food_id}"
 
     # return body if OK response
-    validate_response response
+    process_response response
   end
 
-  def self.validate_response(response)
-    response.body if response.status.eql? 200
+  def self.process_response(response)
+    if response.status.eql? 200
+      response.body
+    else
+      abort('I can not communicate with Yummly. Set the YUMMLY_KEY')
+    end
   end
   # ----------------------------------------------------------------------------
 
@@ -85,7 +89,7 @@ class Request
     metadata_key = Parser.slice_metadata_key key
     conn = generic_connection
     meta_response = conn.get "metadata/#{metadata_key}"
-    meta_response.body
+    process_response meta_response
   end
 
   def self.init_search_parameters(search_parameters, key)

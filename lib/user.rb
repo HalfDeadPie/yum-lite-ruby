@@ -21,7 +21,7 @@ class User
     if response
       process_login_response email, password, response
       store_creddentials
-      'Login sucess'
+      'Login success'
     else
       'Login failed'
     end
