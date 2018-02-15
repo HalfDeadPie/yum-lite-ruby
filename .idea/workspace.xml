@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a3772b9-603e-457f-9d68-0e67511b1629" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -297,7 +296,7 @@
       <workItem from="1518518521266" duration="38796000" />
       <workItem from="1518599593207" duration="31213000" />
       <workItem from="1518646789018" duration="3851000" />
-      <workItem from="1518693291740" duration="18297000" />
+      <workItem from="1518693291740" duration="18317000" />
     </task>
     <task id="LOCAL-00001" summary="The first version of Yum. TODO: Rubocop, tests, docummentation">
       <created>1518602064059</created>
@@ -341,11 +340,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518718494976</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Registration and login improved, yard doccumen">
+      <created>1518720332939</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518720332939</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149424000" />
+    <option name="totallyTimeSpent" value="149444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
