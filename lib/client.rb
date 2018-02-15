@@ -1,5 +1,10 @@
-# Provides methods to access Yummly API
+# Encapsulate all the main functionality and represents the client
+# using the user database and Yummly API
 class Client
+  # Provides the recipe for the logged user according
+  # to his level and searching parameters
+  #
+  # @param parameters [Hash] searching parameters from from the command line
   def recipe(parameters)
     user = User.new
     user.read_creddentials
@@ -10,16 +15,25 @@ class Client
     puts generated_food.to_str
   end
 
+  # Register the user using Backendless
+  #
+  # @param email [String] email of the user
+  # @param password [String] password of the user
   def register(email, password)
     user = User.new
     puts user.register email, password
   end
 
+  # Login the user using Backendless
+  #
+  # @param email [String] email of the user
+  # @param password [String] password of the user
   def login(email, password)
     user = User.new
     puts user.login email, password
   end
 
+  # Provides the last recipe of logged user
   def last
     user = User.new
     user.read_creddentials
@@ -28,6 +42,7 @@ class Client
     puts last_food.to_str
   end
 
+  # Reviews the cooked food of the last recipe of logged user
   def review(rating)
     user = User.new
     user.read_creddentials
@@ -40,6 +55,7 @@ class Client
     end
   end
 
+  # Provides the stats of the user
   def user
     user = User.new
     user.read_creddentials

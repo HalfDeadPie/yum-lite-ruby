@@ -1,6 +1,9 @@
 # The command line interface parser
 class CliParser
+  # Options of the command line parser
   @options = {}
+
+  # help message
   @help = {
     holiday: 'Include/exclude holiday recipes',
     ing: 'Include/exclude recipes with ingredients',
@@ -8,6 +11,8 @@ class CliParser
     diet: 'Include/exclude diet recipes',
     phrase: 'Includes recipes with phrase in name'
   }
+
+  # building the banner
   @banner = "Usage: yum [options] SUBCOMMAND\n"
   @banner += "\nSUBCOMMANDS:\n"
   @banner += "\trecipe\t\t-\t\tGenerates recipe according to parameters\n\n"
@@ -18,6 +23,7 @@ class CliParser
   @banner += "food from 0 to 3 points and gain the XP points\n\n"
   @banner += "\tuser\t\t-\t\tPrints the user stats\n\n"
 
+  # Parse the options in command line
   def self.parse_opts
     OptionParser.new do |opts|
       opts.banner = @banner
@@ -89,6 +95,7 @@ class CliParser
     abort(e)
   end
 
+  # Parse the arguments in the command line
   def self.parse_argv
     client = Client.new
     subcommands = {
@@ -102,6 +109,9 @@ class CliParser
     call_subcommand subcommands[ARGV[0].to_sym]
   end
 
+  # Tries to call subcommand extracted from hash
+  #
+  # @param command [String] subcommand to call
   def self.call_subcommand(command)
     if command.nil?
       abort(@banner)

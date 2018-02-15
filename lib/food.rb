@@ -1,7 +1,11 @@
-# Represents single food from Yummly
+# Represents single recipe from Yummly
 class Food
+  # the id of the recipe on Yummly
   attr_reader :id
 
+  # Creates food with the parameters from JSON
+  #
+  # @param food_json [JSON] recipe encapsulated in json from Yummly
   def initialize(food_json)
     @name = food_json['name']
     @id = food_json['id']
@@ -11,10 +15,17 @@ class Food
     @guide_url = food_json['source']['sourceRecipeUrl']
   end
 
+  # Extract image from json
+  #
+  # @param food_json [JSON] recipe encapsulated in json from Yummly
+  # @return [String] URL of the image
   def image_url(food_json)
     food_json['images'][0].values.first
   end
 
+  # Provides stats of the user in human-readble form
+  #
+  # @return [String] stats of the user
   def to_str
     result = @name
     result += "\nID: #{@id}"

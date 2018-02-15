@@ -47,27 +47,19 @@ RSpec.describe Yum do
 
   context '---User login' do
     it 'tried to login wrong user' do
-      expect do
-        client.login 'somebody123','hisSurelyWrongPassword'
-      end.to output("Login failed\n").to_stdout
+      expect{ client.login 'somebody123','hisSurelyWrongPassword' }.to raise_error 'Login failed'
     end
 
     it 'tried to login the user without username' do
-      expect do
-        client.login nil, password
-      end.to output("Login failed\n").to_stdout
+      expect{ client.login nil, password }.to raise_error 'Login failed'
     end
 
     it 'tried to login the user without password' do
-      expect do
-        client.login username, nil
-      end.to output("Login failed\n").to_stdout
+      expect{ client.login username, nil }.to raise_error 'Login failed'
     end
 
     it 'tried to login the user without arguments' do
-      expect do
-        client.login nil, nil
-      end.to output("Login failed\n").to_stdout
+      expect{ client.login nil, nil }.to raise_error 'Login failed'
     end
 
     it 'tried to login the user correctly' do
