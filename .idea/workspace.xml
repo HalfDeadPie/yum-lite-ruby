@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a3772b9-603e-457f-9d68-0e67511b1629" name="Default" comment="Registration and login improved, yard doccumen">
+    <list default="true" id="2a3772b9-603e-457f-9d68-0e67511b1629" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/backendless.rb" afterPath="$PROJECT_DIR$/lib/backendless.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cli_parser.rb" afterPath="$PROJECT_DIR$/lib/cli_parser.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/client.rb" afterPath="$PROJECT_DIR$/lib/client.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/food.rb" afterPath="$PROJECT_DIR$/lib/food.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/parser.rb" afterPath="$PROJECT_DIR$/lib/parser.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/request.rb" afterPath="$PROJECT_DIR$/lib/request.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/user.rb" afterPath="$PROJECT_DIR$/lib/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/yum.rb" afterPath="$PROJECT_DIR$/lib/yum.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/yum/version.rb" afterPath="$PROJECT_DIR$/lib/yum/version.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/yum_connector.rb" afterPath="$PROJECT_DIR$/lib/yum_connector.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/yum_spec.rb" afterPath="$PROJECT_DIR$/spec/yum_spec.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,45 +25,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yum.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/yum.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="yum.gemspec" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yum.gemspec">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="630">
-                <caret line="97" column="11" lean-forward="true" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+              <first_editor relative-caret-position="360">
+                <caret line="92" column="46" lean-forward="false" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="version.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/yum/version.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -129,7 +88,6 @@
         <option value="$PROJECT_DIR$/lib/yum/request.rb" />
         <option value="$PROJECT_DIR$/lib/faraday.rb" />
         <option value="$PROJECT_DIR$/lib/printer.rb" />
-        <option value="$PROJECT_DIR$/creddentials.csv" />
         <option value="$PROJECT_DIR$/lib/configuration.rb" />
         <option value="$PROJECT_DIR$/spec/Test_backendless.rb" />
         <option value="$PROJECT_DIR$/yum.gemspec" />
@@ -144,6 +102,7 @@
         <option value="$PROJECT_DIR$/lib/yum_connector.rb" />
         <option value="$PROJECT_DIR$/lib/user.rb" />
         <option value="$PROJECT_DIR$/lib/yum/version.rb" />
+        <option value="$PROJECT_DIR$/creddentials.csv" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -183,17 +142,6 @@
           <expand>
             <path>
               <item name="yum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yum" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="yum" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yum" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="yum" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -349,7 +297,7 @@
       <workItem from="1518518521266" duration="38796000" />
       <workItem from="1518599593207" duration="31213000" />
       <workItem from="1518646789018" duration="3851000" />
-      <workItem from="1518693291740" duration="16726000" />
+      <workItem from="1518693291740" duration="18297000" />
     </task>
     <task id="LOCAL-00001" summary="The first version of Yum. TODO: Rubocop, tests, docummentation">
       <created>1518602064059</created>
@@ -386,11 +334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518697187380</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Registration and login improved, yard doccumen">
+      <created>1518718494976</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518718494976</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147853000" />
+    <option name="totallyTimeSpent" value="149424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -490,7 +445,8 @@
     <MESSAGE value="Rubocop: 0.1.0 OK, TODO: Tests, docummnetation and improve requires" />
     <MESSAGE value="Parsing the subcommands improved - Hash and lambdas used" />
     <MESSAGE value="Improved setting the Backendless key and Yummly key using the ENV variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved setting the Backendless key and Yummly key using the ENV variables" />
+    <MESSAGE value="Registration and login improved, yard doccumen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Registration and login improved, yard doccumen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -751,18 +707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yum.gemspec">
+    <entry file="file://$PROJECT_DIR$/lib/yum/version.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/cli_parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+        <state relative-caret-position="330">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -775,18 +723,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/yum.rb">
+    <entry file="file://$PROJECT_DIR$/yum.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="300">
+          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/yum/version.rb">
+    <entry file="file://$PROJECT_DIR$/lib/yum.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="270">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/cli_parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2940">
+          <caret line="98" column="21" lean-forward="false" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -794,8 +750,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="97" column="11" lean-forward="true" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+          <first_editor relative-caret-position="360">
+            <caret line="92" column="46" lean-forward="false" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
             <folding />
           </first_editor>
           <second_editor />

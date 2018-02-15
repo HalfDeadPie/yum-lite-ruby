@@ -7,15 +7,15 @@ to increasing your level. And your level and XP points "unlock" for you more dif
 
 The application uses the Yummly API to access the recipes of the food:
 
-    ```https://developer.yummly.com/```
+    https://developer.yummly.com/
     
 There is also used the Backendless REST as the storage of users data:
 
-    ```https://backendless.com/docs/rest/doc.html```
+    https://backendless.com/docs/rest/doc.html
     
 Application uses Faraday adapter for executing the requests:
 
-    ```http://www.rubydoc.info/gems/faraday/Faraday/Adapter```
+    http://www.rubydoc.info/gems/faraday/Faraday/Adapter
 
 As the new user, you should registrate first with your email and password. After login, you start at level 0 and you
 are able to generate recipe. So let's cook!
@@ -25,6 +25,10 @@ are able to generate recipe. So let's cook!
 You are able to install this gem using this command:
 
     $ gem install yum
+    
+You can find it on link:
+
+    https://rubygems.org/gems/yum
 
 Or you can download it from Github and install it this way:
 
