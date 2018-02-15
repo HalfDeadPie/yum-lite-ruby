@@ -1,5 +1,7 @@
 # Yum
 
+[view the documentation](http://www.rubydoc.info/github/HalfDeadPie/yum-lite-ruby/master/index)
+
 The Yum is the application with command line interface. The main purpose of this application is to increase your cookings
 skills, which are represented as the level. All you need to do is to generate the recipe which you like, cook the food, eat it
 and review it using scale from 0 to 3. The better food you prepare, the more XP points you get. Increasing your XP points leads
