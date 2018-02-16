@@ -76,6 +76,8 @@ class Request
   def self.process_response(response)
     if response.status.eql? 200
       response.body
+    elsif [414].include? response.status
+      abort('Sorry, I can not find food like this')
     else
       abort('I can not communicate with Yummly. Set the YUMMLY_KEY')
     end
