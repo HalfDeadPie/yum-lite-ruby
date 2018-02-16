@@ -63,7 +63,7 @@ class User
 
   # Stores the credentials to 'creddentials.csv' to achieve persistence
   def store_creddentials
-    CSV.open('creddentials.csv', 'w') do |csv|
+    CSV.open(ENV['HOME'] + '/creddentials.csv', 'w') do |csv|
       csv << [@email, @password]
     end
     read_creddentials
@@ -72,7 +72,7 @@ class User
   # Reads the credentials from the 'creddentials.csv' and set them
   def read_creddentials
     creddentials = []
-    CSV.foreach 'creddentials.csv' do |record|
+    CSV.foreach ENV['HOME'] + '/creddentials.csv' do |record|
       creddentials << record
     end
     @email = creddentials[0][0]

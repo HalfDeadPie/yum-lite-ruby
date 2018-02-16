@@ -20,7 +20,9 @@ class Food
   # @param food_json [JSON] recipe encapsulated in json from Yummly
   # @return [String] URL of the image
   def image_url(food_json)
-    food_json['images'][0].values.first
+    url = food_json['images'][0]['hostedLargeUrl']
+    url = 'Sorry, I can not provide you picture of this food' if url.nil?
+    url
   end
 
   # Provides stats of the user in human-readble form
